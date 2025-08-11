@@ -360,9 +360,9 @@ defineOptions({ name: "ResumePage" });
   line-height: 1.6;
   color: #333;
   background: #fff;
-  max-width: 210mm;
+  max-width: 800px;
   margin: 0 auto;
-  //padding: 20mm;
+  padding: 75px;
 }
 
 * {
@@ -424,6 +424,7 @@ defineOptions({ name: "ResumePage" });
   margin-bottom: 20px;
   padding-left: 15px;
   border-left: 2px solid #f0f0f0;
+  break-inside: avoid;
 }
 
 .work-header,
@@ -478,6 +479,7 @@ defineOptions({ name: "ResumePage" });
   background: #f8f9fa;
   padding: 15px;
   border-radius: 5px;
+  break-inside: avoid;
 }
 
 .skill-category h4 {
@@ -517,5 +519,63 @@ defineOptions({ name: "ResumePage" });
 .highlight {
   color: #2c5aa0;
   font-weight: bold;
+}
+
+/* For printing */
+@media print {
+  .resume-container {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .resume-container {
+    padding: 56px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 767px) {
+  .resume-container {
+    padding: 38px 19px;
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .work-header,
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .period {
+    font-size: 13px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
