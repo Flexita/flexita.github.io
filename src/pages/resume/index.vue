@@ -1,172 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>程少华 - 前端开发工程师简历</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            max-width: 210mm;
-            margin: 0 auto;
-            padding: 20mm;
-        }
-        
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #2c5aa0;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .name {
-            font-size: 36px;
-            font-weight: bold;
-            color: #2c5aa0;
-            margin-bottom: 10px;
-        }
-        
-        .title {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .contact-info {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-size: 14px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .section {
-            margin-bottom: 25px;
-        }
-        
-        .section-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #2c5aa0;
-            border-left: 4px solid #2c5aa0;
-            padding-left: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .work-item, .project-item {
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 2px solid #f0f0f0;
-        }
-        
-        .work-header, .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-        
-        .company-name, .project-name {
-            font-weight: bold;
-            font-size: 16px;
-            color: #333;
-        }
-        
-        .position, .tech-stack {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .period {
-            color: #999;
-            font-size: 14px;
-            white-space: nowrap;
-        }
-        
-        .description {
-            margin-top: 8px;
-            color: #555;
-            font-size: 14px;
-        }
-        
-        .description ul {
-            margin-top: 5px;
-            padding-left: 20px;
-        }
-        
-        .description li {
-            margin-bottom: 5px;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        
-        .skill-category {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        
-        .skill-category h4 {
-            color: #2c5aa0;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-        
-        .skill-list {
-            font-size: 13px;
-            color: #555;
-        }
-        
-        .education-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .education-left {
-            flex: 1;
-        }
-        
-        .university {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 3px;
-        }
-        
-        .major {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .highlight {
-            color: #2c5aa0;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
+<template>
+  <div class="resume-container">
     <div class="header">
         <div class="name">程少华</div>
         <div class="title">资深前端开发工程师</div>
@@ -221,7 +54,7 @@
                     <li>不定期参与Code review，推进工程化建设和代码质量管控</li>
                     <li>指导和培养团队成员，技术难点攻关和性能优化</li>
                     <li>与产品、后端团队密切配合，确保项目按期高质量交付</li>
-                    <li>深度参与多个大型前端项目的开发，包括EHS企业安全生产管理系统、消防接处警（指挥调度）系统等</li> 
+                    <li>深度参与多个大型前端项目的开发，包括EHS企业安全生产管理系统、消防接处警（指挥调度）系统等</li>
                 </ul>
             </div>
         </div>
@@ -276,7 +109,7 @@
                 <ul>
                     <li>微信小程序开发，sass平台开发，网站开发</li>
                     <li>根据设计稿高度还原前端页面；</li>
-                    <li>负责公司核心产品的前端架构设计和技术选型</li> 
+                    <li>负责公司核心产品的前端架构设计和技术选型</li>
                 </ul>
             </div>
         </div>
@@ -284,7 +117,7 @@
 
     <div class="section">
         <div class="section-title">🚀 项目经验</div>
-        
+
         <div class="project-item">
             <div class="project-header">
                 <div>
@@ -424,5 +257,171 @@
             具备良好的沟通协调能力和团队合作精神，能够胜任职位，带领团队完成更具挑战性的项目。
         </div>
     </div>
-</body>
-</html>
+  </div>
+</template>
+
+<script lang="ts" setup>
+defineOptions({ name: "ResumePage" });
+</script>
+
+<style lang="scss" scoped>
+.resume-container {
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 20mm;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c5aa0;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.work-item, .project-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #f0f0f0;
+}
+
+.work-header, .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.company-name, .project-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.position, .tech-stack {
+    color: #666;
+    font-size: 14px;
+}
+
+.period {
+    color: #999;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.description {
+    margin-top: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+.description ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.description li {
+    margin-bottom: 5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.skill-category {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.skill-category h4 {
+    color: #2c5aa0;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.skill-list {
+    font-size: 13px;
+    color: #555;
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.education-left {
+    flex: 1;
+}
+
+.university {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.major {
+    color: #666;
+    font-size: 14px;
+}
+
+.highlight {
+    color: #2c5aa0;
+    font-weight: bold;
+}
+</style>
