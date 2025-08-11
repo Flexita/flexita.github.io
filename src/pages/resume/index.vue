@@ -135,8 +135,8 @@
           <div class="period">核心项目</div>
         </div>
         <div class="description">
-          <strong>项目描述：</strong
-          >企业级安全生产管理系统，包含设备管理、事故管理、风险管理、法规管理十数个子系统
+          <strong>项目描述：</strong>
+          企业级安全生产管理系统，包含设备管理、事故管理、风险管理、法规管理十数个子系统
           <ul>
             <li>
               采用
@@ -273,7 +273,8 @@
         <div class="skill-category">
           <h4>前端框架</h4>
           <div class="skill-list">
-            Vue2/3, Nuxt.js, TypeScript, JavaScript ES6+
+            Vue2/3, Nuxt.js, TypeScript, JavaScript ES6+, UniApp, ApiCloud,
+            Electron
           </div>
         </div>
         <div class="skill-category">
