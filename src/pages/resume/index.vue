@@ -171,6 +171,19 @@ const highlightText = (text: string, highlights: string[]) => {
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
+:global(.dark) {
+  --text-dark: #f3f4f6;
+  --text-medium: #d1d5db;
+  --text-light: #9ca3af;
+  --bg-light: #1f2937;
+  --bg-card: #111827;
+  --border-color: #374151;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -184,6 +197,11 @@ const highlightText = (text: string, highlights: string[]) => {
   background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
   min-height: 100vh;
   padding: 60px 20px;
+  transition: all 0.3s ease;
+}
+
+:global(.dark) .resume-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 /* 头部样式 - 现代化设计 */
@@ -299,7 +317,7 @@ const highlightText = (text: string, highlights: string[]) => {
   background-clip: text;
   margin-bottom: 24px;
   padding-bottom: 12px;
-  border-bottom: 3px solid #e5e7eb;
+  border-bottom: 3px solid var(--border-color);
   position: relative;
 
   &::after {
@@ -320,7 +338,7 @@ const highlightText = (text: string, highlights: string[]) => {
   margin-bottom: 28px;
   padding: 20px;
   padding-left: 24px;
-  border-left: 3px solid #e5e7eb;
+  border-left: 3px solid var(--border-color);
   border-radius: 8px;
   background: var(--bg-light);
   transition: all 0.3s ease;
@@ -340,7 +358,7 @@ const highlightText = (text: string, highlights: string[]) => {
 
   &:hover {
     border-left-color: #667eea;
-    background: #ffffff;
+    background: var(--bg-card);
     box-shadow: var(--shadow-sm);
     transform: translateX(4px);
 
@@ -388,6 +406,11 @@ const highlightText = (text: string, highlights: string[]) => {
   background: #e0e7ff;
   border-radius: 12px;
   font-weight: 500;
+
+  :global(.dark) & {
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+  }
 }
 
 .description {
@@ -446,6 +469,11 @@ const highlightText = (text: string, highlights: string[]) => {
     transition: transform 0.3s ease;
   }
 
+  :global(.dark) & {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    border-color: #374151;
+  }
+
   &:hover {
     border-color: #c7d2fe;
     box-shadow: var(--shadow-md);
@@ -491,7 +519,7 @@ const highlightText = (text: string, highlights: string[]) => {
   transition: all 0.3s ease;
 
   &:hover {
-    background: #ffffff;
+    background: var(--bg-card);
     border-color: #e0e7ff;
     box-shadow: var(--shadow-sm);
   }
@@ -521,6 +549,11 @@ const highlightText = (text: string, highlights: string[]) => {
   background: rgba(102, 126, 234, 0.1);
   border-radius: 4px;
   transition: all 0.3s ease;
+
+  :global(.dark) & {
+    color: #a5b4fc;
+    background: rgba(99, 102, 241, 0.2);
+  }
 
   &:hover {
     background: rgba(102, 126, 234, 0.2);

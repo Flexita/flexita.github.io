@@ -43,7 +43,9 @@ const titleText = computed(() => {
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
-  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   border-radius: 50%;
   transition: background-color 0.3s;
   display: flex;
