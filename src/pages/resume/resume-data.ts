@@ -2,7 +2,7 @@ export const resumeData = {
   header: {
     name: "程少华",
     title: "资深前端开发工程师",
-    subtitle: "7+ Years Experience • Full Stack Development",
+    subtitle: "7+ Years Experience • Front-end Engineer",
     contacts: [
       { icon: "phone", value: "18915635379", link: "tel:18915635379" },
       {
